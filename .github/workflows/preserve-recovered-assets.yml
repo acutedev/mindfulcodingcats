@@ -1,0 +1,55 @@
+name: Preserve recovered website assets
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/preserve-recovered-assets.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  preserve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download recovered original assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets games/assets
+          H="https://daftpage.s3.amazonaws.com/projects/clgmzvgq3004w08leer36bb2y/assets"
+          G="https://daftpage.s3.amazonaws.com/projects/clijj24l8004u08l3bi4re8mp/assets"
+          for f in favicon-ouik3i.png mcc-opened-eyes-onhpm5-zprn4h.jpg cat-noturn-m55ek6-5sbxnr.gif lana-t5b92v.JPG linkedin-logo-icon-8mpjll.png cat-in-the-hat-with-the-wand-kdffed.png; do
+            curl -fL --retry 3 "$H/$f" -o "assets/$f"
+          done
+          for f in 12-22ymelephant13-t72yhw.png 1-22ymgiraffe11-uy6yzp.png favicon-ouik3i.png giphy-Y0nMEhg6S31OGSobuV.gif 9-22ymelephant11-hvji63.png game-2-1q5qh9.png giphy-lLIBKKEx4MYms.gif game-3-lglsj6.png 7-22ymelephant17-k2fgzc.png mcc-opened-eyes-onhpm5-zprn4h.jpg 10-22ymelephant4-xd0zza.png 12-22ymelephant19-eu8w5l.png 2-22ymgiraffe1-rxj1u7.png giphy-WTKbVnZyJdtqjTCCUt.gif 3-22ymgiraffe9-qt4rht.png ukraine-you-are-in-our-hearts-9w74s9.jpeg 4-22ymgiraffe6-56rztj.png 10-22ymrhino1-bjxrub.png 4-22ymgiraffe13-veqh0p.png 8-22ymrhino22-f16w4k.png game-4-2zcfg2.png game-1-j3xeqk.png giphy-RJT3gV3BBy8t0sdIXm.gif giphy-RWoZzMm9PUuGqe2F3n.gif 9-22ymrhino9-kgdhyc.png we-stand-with-ukraine-vehdlq.png 14-22ymgiraffe25-lz8tlg.png 13-22ymgiraffe16-swev2x.png; do
+            curl -fL --retry 3 "$G/$f" -o "games/assets/$f"
+          done
+      - name: Make site independent of Daftpage
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          h=Path("index.html")
+          s=h.read_text()
+          old="https://daftpage.s3.amazonaws.com/projects/clgmzvgq3004w08leer36bb2y/assets/"
+          s=s.replace(old,"assets/")
+          h.write_text(s)
+          oldg="https://daftpage.s3.amazonaws.com/projects/clijj24l8004u08l3bi4re8mp/assets/"
+          for h in Path("games").glob("*.html"):
+              s=h.read_text()
+              s=s.replace(oldg,"assets/")
+              h.write_text(s)
+          PY
+      - name: Commit preserved assets
+        shell: bash
+        run: |
+          git config user.name "Mindful Coding Cats Recovery"
+          git config user.email "actions@users.noreply.github.com"
+          git add assets games/assets index.html games/*.html
+          if git diff --cached --quiet; then
+            echo "Nothing to preserve."
+          else
+            git commit -m "Preserve recovered website assets locally"
+            git push
+          fi
