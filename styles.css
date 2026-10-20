@@ -5,3 +5,6 @@
 
 /* Canonical July 2025 navbar/hero fidelity */
 .nav{position:relative;box-shadow:none;padding:14px max(24px,5vw)}.nav nav{gap:32px}.nav nav a{color:#e8602b;font-size:16px;font-weight:600}.brand{font-size:24px}.hero{min-height:489px;padding-top:35px;padding-bottom:35px;background:#fff;grid-template-columns:57.4037% 40.5963%}.hero h1{max-width:800px}.hero-cat{max-height:489px}.button{background:#e67138}.teacher,.why{max-width:1580px}.why{background:#cefdf7}@media(max-width:950px){.nav nav{gap:14px}.nav nav a{font-size:14px}}@media(max-width:800px){.nav nav{display:grid;grid-template-columns:1fr 1fr}.brand{font-size:21px}.hero{grid-template-columns:1fr}}
+
+/* Visible media blocks recovered from the canonical 2025 homepage */
+.recovered-media{padding:70px 5vw;background:#cefdf7}.media-grid{max-width:1050px;margin:auto;display:grid;grid-template-columns:minmax(300px,359px) minmax(420px,736px);justify-content:center;gap:55px;align-items:center}.snackeet-wrap iframe{display:block;width:359px;max-width:100%;height:630px;border:0;border-radius:10px;background:transparent}.video-wrap iframe{width:100%;aspect-ratio:16/9;border:0}@media(max-width:800px){.media-grid{grid-template-columns:1fr}.snackeet-wrap{display:flex;justify-content:center}}
