@@ -92,3 +92,10 @@ footer{text-align:center;padding:45px 20px;color:#6b7280;background:#fff}footer 
  .media-showcase{padding-left:0;padding-right:0}.media-snackeet iframe{height:560px}
  .chat-section iframe{min-height:460px}
 }
+
+/* V2 flow refinement */
+.arcade-call{scroll-margin-top:90px}
+@media(max-width:800px){
+ .arcade-call p:not(.eyebrow){max-width:620px;margin-left:auto;margin-right:auto}
+ iframe{max-width:100%}
+}
