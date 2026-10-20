@@ -51,3 +51,18 @@ footer{text-align:center;padding:45px 20px;color:#6b7280;background:#fff}footer 
 .button{box-shadow:0 8px 20px rgba(230,113,56,.18);transition:transform .18s ease,box-shadow .18s ease}.button:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(230,113,56,.25)}
 @media(max-width:950px){.nav{position:static}.chat-section{grid-template-columns:1fr}.chat-section>div{position:static}.benefit-grid{grid-template-columns:1fr}.teacher-points{grid-template-columns:1fr}}
 @media(max-width:520px){.trust-strip span{width:100%}.chat-section{padding:55px 6vw}.chat-section iframe{height:600px}}
+
+/* Story-driven class + media sequence */
+.class-experience{text-align:center;padding:80px 7vw;background:#fff}
+.class-experience h2,.brand-story h2,.avatar-invite h2,.song-section h2{font:700 clamp(34px,4vw,52px) 'Nunito';color:#111827;margin:6px auto 14px}
+.section-lead{max-width:820px;margin:0 auto 35px;font-size:18px}
+.class-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:0 auto 28px}
+.class-steps article{padding:28px 22px;border-radius:24px;background:#fbf4fb}.class-steps article:nth-child(2){background:#cefdf7}.class-steps article:nth-child(3){background:#fff3df}
+.step-icon{display:block;font-size:38px;margin-bottom:8px}.class-steps b{display:block;font:700 23px 'Nunito';color:#111827}.class-steps p{font-size:15px}
+.class-note{max-width:760px;margin:25px auto 0;font-size:18px}
+.brand-story{text-align:center;padding:75px 5vw 35px;background:#cefdf7}.brand-story-head,.media-context{max-width:780px;margin:auto}.brand-story .media-canva{background:transparent;padding-bottom:30px}
+.avatar-invite{display:grid;grid-template-columns:1fr 430px;gap:50px;align-items:center;padding:70px 8vw;background:#fbf4fb}.avatar-invite .media-showcase{background:transparent;padding:0;min-height:0}.avatar-invite .media-snackeet iframe{height:630px}
+.media-context p{font-size:18px}.media-context .button{margin-top:12px}
+.song-section{text-align:center;padding:70px 5vw;background:#fff}.song-section .media-video{padding-bottom:10px}
+.final p{max-width:780px;margin:0 auto;font-size:18px}
+@media(max-width:850px){.class-steps{grid-template-columns:1fr}.avatar-invite{grid-template-columns:1fr;padding:55px 7vw}.avatar-invite .media-showcase{justify-content:center}}
