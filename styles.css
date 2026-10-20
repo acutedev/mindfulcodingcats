@@ -16,3 +16,5 @@ footer{text-align:center;padding:45px 20px;color:#6b7280;background:#fff}footer 
 @media(max-width:950px){.nav nav{gap:14px}.nav nav a{font-size:14px}}
 @media(max-width:800px){.nav{display:block}.brand{font-size:21px}.nav nav{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:10px}.hero,.teacher,.why{grid-template-columns:1fr}.hero{min-height:auto;padding:45px 7vw}.hero-cat,.wizard,.lana{margin:auto}.teacher,.why{gap:30px;padding:55px 7vw}.creation-inner{grid-template-columns:1fr;gap:25px}.creation-band:nth-child(even) .creation-copy,.creation-band:nth-child(even) iframe{order:initial}.creation-copy{text-align:center}.creation-band{padding:38px 5vw}.project-grid{grid-template-columns:1fr}.media-showcase{padding:40px 5vw}.media-snackeet{min-height:auto}.media-snackeet iframe{height:630px}}
 @media(max-width:520px){.nav nav{grid-template-columns:1fr}.hero h1{font-size:42px}.creation-copy h3{font-size:34px}.media-snackeet iframe{height:600px}}
+
+.arcade-hero-image{display:block;width:min(100%,1000px);height:auto;margin:0 auto 32px;border-radius:24px}
