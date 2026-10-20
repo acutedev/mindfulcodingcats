@@ -23,7 +23,7 @@ jobs:
             curl -fL --retry 3 "$H/$f" -o "assets/$f"
           done
           for f in 12-22ymelephant13-t72yhw.png 1-22ymgiraffe11-uy6yzp.png favicon-ouik3i.png giphy-Y0nMEhg6S31OGSobuV.gif 9-22ymelephant11-hvji63.png game-2-1q5qh9.png giphy-lLIBKKEx4MYms.gif game-3-lglsj6.png 7-22ymelephant17-k2fgzc.png mcc-opened-eyes-onhpm5-zprn4h.jpg 10-22ymelephant4-xd0zza.png 12-22ymelephant19-eu8w5l.png 2-22ymgiraffe1-rxj1u7.png giphy-WTKbVnZyJdtqjTCCUt.gif 3-22ymgiraffe9-qt4rht.png ukraine-you-are-in-our-hearts-9w74s9.jpeg 4-22ymgiraffe6-56rztj.png 10-22ymrhino1-bjxrub.png 4-22ymgiraffe13-veqh0p.png 8-22ymrhino22-f16w4k.png game-4-2zcfg2.png game-1-j3xeqk.png giphy-RJT3gV3BBy8t0sdIXm.gif giphy-RWoZzMm9PUuGqe2F3n.gif 9-22ymrhino9-kgdhyc.png we-stand-with-ukraine-vehdlq.png 14-22ymgiraffe25-lz8tlg.png 13-22ymgiraffe16-swev2x.png; do
-            curl -fL --retry 3 "$G/$f" -o "games/assets/$f"
+            curl -fL --retry 3 "$G/$f" -o "games/assets/$f" || echo "Archive-only asset retained for ZIP recovery: $f"
           done
       - name: Make site independent of Daftpage
         shell: bash
