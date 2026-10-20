@@ -54,3 +54,41 @@ footer{text-align:center;padding:45px 20px;color:#6b7280;background:#fff}footer 
 .media-context p{font-size:18px}.media-context .button{margin-top:12px}
 .final p{max-width:780px;margin:0 auto;font-size:18px}
 @media(max-width:850px){.avatar-invite{grid-template-columns:1fr;padding:55px 7vw}.avatar-invite .media-showcase{justify-content:center}}
+
+/* V2: mobile-first experience */
+.menu-toggle{display:none;border:0;background:#fbf4fb;color:#e8602b;width:46px;height:46px;border-radius:14px;font-size:25px;line-height:1;cursor:pointer}
+.hero-promise{max-width:700px;margin:0 0 8px;font-weight:700;color:#4d6f9c}
+.class-experience{text-align:center;padding:76px 7vw;background:#fff}
+.class-experience h2{font:700 clamp(34px,4vw,52px) 'Nunito';color:#111827;margin:6px auto 14px}
+.section-lead,.class-note{max-width:800px;margin:0 auto 32px;font-size:18px}
+.class-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:0 auto 28px}
+.class-steps article{padding:28px 22px;border-radius:24px;background:#fbf4fb}
+.class-steps article:nth-child(2){background:#cefdf7}.class-steps article:nth-child(3){background:#fff3df}
+.class-steps article>span{display:block;font-size:38px;margin-bottom:8px}.class-steps b{display:block;font:700 23px 'Nunito';color:#111827}.class-steps p{font-size:15px}
+@media(max-width:800px){
+ .top-note{font-size:12px}
+ .nav{display:flex;position:sticky;top:0;padding:10px 18px}
+ .brand{font-size:19px;min-width:0}.brand img{width:52px;height:36px}
+ .menu-toggle{display:block;flex:0 0 auto}
+ .nav nav{display:none;position:absolute;left:0;right:0;top:100%;margin:0;padding:12px 18px 20px;background:#fff;border-bottom:1px solid #f3f4f6;box-shadow:0 14px 30px rgba(17,24,39,.10);grid-template-columns:1fr}
+ .nav nav.open{display:grid}.nav nav a{display:flex;align-items:center;min-height:46px;padding:9px 12px;border-radius:12px;font-size:15px}
+ .nav-cta{justify-content:center;margin-top:4px}
+ .hero{padding:38px 6vw 48px;gap:18px}.hero h1{font-size:clamp(36px,10vw,48px);line-height:1.06}.lead{font-size:clamp(21px,6vw,29px);margin-bottom:12px}.hero-clear{font-size:18px}.hero-promise{font-size:15px}
+ .hero-actions{align-items:stretch;flex-direction:column;gap:12px}.hero-actions .button,.hero-actions .text-link{text-align:center;padding:13px 18px}
+ .button{min-height:46px;text-align:center}
+ .teacher,.why{padding:50px 6vw}.teacher h2,.why h2,.arcade-call h2,.final h2,.chat-section h2,.parent-cta h2,.brand-story h2,.avatar-invite h2,.class-experience h2{font-size:clamp(31px,8vw,42px);line-height:1.12}
+ .teacher-points{grid-template-columns:1fr}.benefit-grid{grid-template-columns:1fr}
+ .class-experience{padding:55px 6vw}.class-steps{grid-template-columns:1fr}.class-steps article{padding:22px 18px}.section-lead,.class-note{font-size:16px}
+ .avatar-invite{grid-template-columns:1fr;padding:55px 6vw;gap:28px}.media-canva iframe{width:100%;max-width:520px}
+ .brand-story{padding:55px 5vw 28px}.media-snackeet iframe{width:min(359px,94vw)}
+ .final,.arcade-call,.parent-cta{padding:55px 6vw}
+ .chat-section{grid-template-columns:1fr;padding:55px 6vw;gap:25px}.chat-section>div{position:static}.chat-section iframe{height:min(620px,72vh);min-height:480px}
+}
+@media(max-width:420px){
+ .brand{font-size:17px;gap:8px}.brand img{width:46px;height:34px}.menu-toggle{width:44px;height:44px}
+ .hero{padding-left:20px;padding-right:20px}.hero h1{font-size:36px}
+ .trust-strip span{width:100%}
+ .teacher,.why,.class-experience,.avatar-invite,.chat-section,.final,.arcade-call,.parent-cta{padding-left:20px;padding-right:20px}
+ .media-showcase{padding-left:0;padding-right:0}.media-snackeet iframe{height:560px}
+ .chat-section iframe{min-height:460px}
+}
