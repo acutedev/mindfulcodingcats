@@ -99,3 +99,15 @@ footer{text-align:center;padding:45px 20px;color:#6b7280;background:#fff}footer 
  .arcade-call p:not(.eyebrow){max-width:620px;margin-left:auto;margin-right:auto}
  iframe{max-width:100%}
 }
+
+/* V2 real student work */
+.student-showcase{padding:76px 7vw;background:#4d6f9c;text-align:center;color:#fff;scroll-margin-top:90px}
+.student-showcase .eyebrow{color:#cefdf7}.student-showcase h2{font:800 clamp(36px,5vw,58px) 'Nunito';margin:5px 0 10px}.student-showcase-head>p:last-child{max-width:780px;margin:0 auto 30px;font-size:18px}
+.student-cards{max-width:1120px;margin:0 auto 30px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
+.student-card{display:flex;flex-direction:column;background:#fff;color:#374151;text-decoration:none;border-radius:24px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.14);transition:transform .18s ease,box-shadow .18s ease}
+.student-card:hover{transform:translateY(-4px);box-shadow:0 18px 38px rgba(0,0,0,.2)}
+.student-card img{width:100%;aspect-ratio:16/10;object-fit:cover;background:#f9fafb}
+.student-card>div{padding:21px 22px 24px}.student-card span{display:block;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#6b7280}.student-card h3{font:800 23px 'Nunito';color:#111827;margin:7px 0}.student-card p{font-size:15px;line-height:1.55;margin:0 0 15px}.student-card b{color:#e8602b}
+.student-card-text{justify-content:center;background:#cefdf7}.student-card-text>div{padding:32px 26px}.student-showcase>.button{background:#fff;color:#e8602b}
+@media(max-width:800px){.student-showcase{padding:55px 6vw}.student-showcase-head>p:last-child{font-size:16px}.student-cards{grid-template-columns:1fr;max-width:540px}.student-card{border-radius:20px}.student-card h3{font-size:22px}.student-showcase>.button{display:inline-flex;align-items:center;justify-content:center}}
+@media(max-width:420px){.student-showcase{padding-left:20px;padding-right:20px}.student-showcase h2{font-size:34px}.student-card>div,.student-card-text>div{padding:19px 18px 22px}}
